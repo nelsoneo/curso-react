@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+/* import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -20,3 +20,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+ */
+
+import React from 'react';
+import { Text, SafeAreaView } from 'react-native';
+
+const App = () => {
+  return (
+    <SafeAreaView style= {{justifyContent: 'center', flex: 1, alignItems: 'center'}}>
+      <Text>Ola Mundo. My name is Nelson</Text>
+    </SafeAreaView>
+  );
+};
+
+export default App;
