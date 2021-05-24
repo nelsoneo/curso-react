@@ -1,35 +1,20 @@
-/* import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
- */
-
-import React from 'react';
+import React,  { useState } from 'react';
 import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
 
 const App = () => {
+
+  const [numero, setNumero] = useState(60);
+
+  function numeroAleatorio(){
+    const novoNumero = Math.floor(Math.random() * 60);
+
+    setNumero(novoNumero);
+  };
+
   return (
     <SafeAreaView style= {{justifyContent: 'center', flex: 1, alignItems: 'center'}}>
-      <Text style = {styles.randomStyle}>0</Text>
-      <TouchableOpacity style = {styles.buttonStyle}>
+      <Text style = {styles.randomStyle}>{numero}</Text>
+      <TouchableOpacity style = {styles.buttonStyle} onPress = {numeroAleatorio}>
         <Text style = {styles.textButtonStyle}>Gerar random</Text>
       </TouchableOpacity>
     </SafeAreaView>
