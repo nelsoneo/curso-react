@@ -23,14 +23,42 @@ const styles = StyleSheet.create({
  */
 
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
 
 const App = () => {
   return (
     <SafeAreaView style= {{justifyContent: 'center', flex: 1, alignItems: 'center'}}>
-      <Text>Ola Mundo. My name is Nelson</Text>
+      <Text style = {styles.randomStyle}>0</Text>
+      <TouchableOpacity style = {styles.buttonStyle}>
+        <Text style = {styles.textButtonStyle}>Gerar random</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  randomStyle: {
+    fontSize: 36,
+    paddingBottom: 15
+  },
+  buttonStyle: {
+
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#007aff',
+    marginRight: 5,
+    marginLeft: 5
+  },
+  textButtonStyle: {
+    alignSelf: 'center',
+    color: '#007aff',
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10
+  }
+});
 
 export default App;
